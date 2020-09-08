@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html id="theme" class="light">
+
+<head>
+    <title>01 FIRST WEB PAGE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo"><img src="img/logo.png"></div>
+        <a href="#">
+            <div class="menu-element">Home</div>
+        </a>
+        <a href="#">
+            <div class="menu-element">About Us</div>
+        </a>
+        <a href="#">
+            <div class="menu-element">Services</div>
+        </a>
+        <a href="#">
+            <div class="menu-element">Contact</div>
+        </a>
+    </nav>
+
+    <div class="selector"><a class="lightselected" onclick="changeThemeLight()">Light</a> | <a class="darkselected"
+            onclick="changeThemeDark()">Dark</a></div>
+    <div class="body">
+
+        <div>
+            <h2>Column 1</h2>
+            <img src="img/imagen1.jpg" style="width: 100%;" />
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic modi nobis officiis velit obcaecati
+                aspernatur fuga dolorem, illo nulla itaque recusandae, sapiente odio dignissimos error. Praesentium
+                eaque esse quaerat voluptas.</p>
+        </div>
+        <div>
+            <h2>Column 2</h2>
+            <img src="img/imagen1.jpg" style="width: 100%;" />
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic modi nobis officiis velit obcaecati
+                aspernatur fuga dolorem, illo nulla itaque recusandae, sapiente odio dignissimos error. Praesentium
+                eaque esse quaerat voluptas.</p>
+        </div>
+        <div>
+            <h2>Column 3</h2>
+            <img src="img/imagen1.jpg" style="width: 100%;" />
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic modi nobis officiis velit obcaecati
+                aspernatur fuga dolorem, illo nulla itaque recusandae, sapiente odio dignissimos error. Praesentium
+                eaque esse quaerat voluptas.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        Copyright 2020 - Ernesto Cervantes. All Rights Reserved.
+    </footer>
+
+    <script type="text/javascript">
+        function changeThemeDark() {
+            const element = document.getElementById("theme");
+            element.classList.remove("light");
+            element.classList.add("dark");
+        }
+        function changeThemeLight() {
+            const element = document.getElementById("theme");
+            element.classList.remove("dark");
+            element.classList.add("light");
+        }
+    </script>
+</body>
+
+</html>
