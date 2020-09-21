@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>lab items list</title>
+  <title>02 DYNAMIC CALCULATOR</title>
   <script src="./utils.js"></script>
   <script>
     // DOMContentLoaded wait until all dom is loaded, check the docs in below link
     // https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event
     document.addEventListener("DOMContentLoaded", (_) => {
-      let item_name = document.querySelector("#item-name");
-      let item_value = document.querySelector("#item-value");
-      // use here what you have in utils.js
+      document.getElementById("add-item").addEventListener("click", function (e) {
+        const item_name = document.querySelector("#item-name").value;
+        const item_value = document.querySelector("#item-value").value;
+
+        if (!validate(item_name, item_value))
+          return;
+
+        addItem(item_name, item_value);
+        remove_item();
+      })
     });
+
   </script>
 </head>
+
 <body>
   <div id="container">
     item: <input type="text" id="item-name">
@@ -22,8 +32,10 @@
     <button id="add-item"> add</button>
   </div>
   <ul class="items">
-
   </ul>
-  <div id="total"></div>
+
+  <div>Total:<span id="total"> 0</span></div>
 </body>
+<script></script>
+
 </html>
