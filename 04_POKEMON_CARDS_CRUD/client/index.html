@@ -10,6 +10,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", (_) => {
             document.getElementById("add-item").addEventListener("click", add_item_to_list_with_template(get_element_li));
+            document.getElementById("create-item").addEventListener("click", create_element(get_element_li));
         });
     </script>
     <style>
@@ -26,7 +27,8 @@
 <body>
     <div id="container">
         name: <input type="text" id="pokemon-name"  placeholder="or id">
-        <button id="add-item"> add</button>
+        <button id="add-item">add</button>
+        <button id="create-item" style="margin-left: 10px;">create</button>
     </div>
     <ul class="items">
 
